@@ -116,15 +116,7 @@ Copy-Item .env.example .env
 cp .env.example .env
 ```
 
-Edit `backend/.env` with your settings:
-```env
-MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/accessible_learning_db?retryWrites=true&w=majority
-MONGODB_DATABASE=accessible_learning_db
-FRONTEND_ORIGIN=http://localhost:5173
-APP_ENV=development
-PORT=8000
-HOST=0.0.0.0
-```
+
 
 > **Note:** The backend boots safely even if `MONGODB_URI` is not yet configured. The database health endpoint (`/health/db`) will report status as `unconfigured` until valid Atlas credentials are provided.
 
